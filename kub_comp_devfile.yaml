@@ -1,0 +1,18 @@
+schemaVersion: 2.1.0
+metadata:
+    name: mydevfile_kub_comp
+components:
+- name: kub_comp
+  kubernetes:
+    inlined:
+      apiVersion: apps/v1
+      kind: 
+      metadata:
+        name: pi
+      spec:
+        template:
+          spec:
+            containers:
+            - name: job
+              image: nginx
+            restartPolicy: Never
