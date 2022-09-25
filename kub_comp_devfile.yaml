@@ -1,6 +1,6 @@
 schemaVersion: 2.1.0
 metadata:
-    name: mydevfile_kub_comp
+    name: mydevfilekubcomp
 components:
 - name: myk8deploy
   kubernetes:
@@ -8,12 +8,12 @@ components:
       apiVersion: v1
       kind: Pod
       metadata:
-         name: pod_kub
+         name: podkub
       spec:
         template:
           spec:
             containers:
-            - name: nginx_kub
+            - name: nginxkub
               image: nginx
               restartPolicy: Never
   deployByDefault: true
