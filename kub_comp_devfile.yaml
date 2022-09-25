@@ -3,16 +3,17 @@ metadata:
     name: mydevfile_kub_comp
 components:
 - name: myk8deploy
-    kubernetes:
-      inlined: |
-        apiVersion: batch/v1
-        kind: Job
-        metadata:
-          name: pi
-        spec:
-          template:
-            spec:
-              containers:
-              - name: job
-                image: nginx
+  kubernetes:
+    inlined: |
+      apiVersion: v1
+      kind: Pod
+      metadata:
+         name: pod_kub
+      spec:
+        template:
+          spec:
+            containers:
+            - name: nginx_kub
+              image: nginx
               restartPolicy: Never
+  deployByDefault: true
